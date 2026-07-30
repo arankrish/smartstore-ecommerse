@@ -1,0 +1,185 @@
+.nav-input {
+  width: 600px;
+  height: 45px;
+  padding-left: 10px;
+}
+.nav-button {
+  width: 200px;
+  height: 45px;
+}
+
+.big-card-img {
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 60vh;
+}
+.big-card {
+  background-color: rgba(0, 0, 0, 0.471);
+  padding-top: 70px;
+  padding-left: 30px;
+}
+.button-hover {
+  visibility: hidden;
+}
+
+.card:hover .button-hover {
+  visibility: visible;
+}
+
+.card {
+  overflow: hidden; /* clips the zoomed image so it doesn't spill outside the rounded corners */
+}
+
+.card-img-top {
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.1); /* 10% zoom — adjust to taste */
+}
+
+.custom-divider {
+  width: 5%;
+  height: 2.5px; /* thickness */
+  background-color: #0d6efd; /* Bootstrap primary blue — or use your own hex */
+  border: none; /* removes Bootstrap's default border-top */
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.product-box:hover .card-img-top {
+  transform: scale(1.1); /* 10% zoom — adjust to taste */
+}
+.product-box:hover .product-buttons {
+  visibility: visible;
+}
+
+.cart-button {
+  color: rgb(1, 94, 255);
+  background-color: rgb(219, 219, 254);
+}
+
+.product-box:hover .cart-button {
+  background-color: #0d6efd;
+  color: antiquewhite;
+}
+
+button:hover {
+  background-color: rgb(106, 117, 214);
+}
+.product-buttons {
+  visibility: hidden;
+}
+.hov-effect {
+  border: 3px solid grey;
+  color: grey;
+}
+.hov-effect:hover i {
+  border-color: rgb(106, 117, 214);
+}
+
+.hov-effect:hover {
+  border: 3px solid rgb(106, 117, 214);
+  color: rgb(106, 117, 214);
+}
+
+.hlight-products {
+  border: 0.5px solid rgba(128, 128, 128, 0.44);
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+  border-bottom-left-radius: 2%;
+  border-bottom-right-radius: 2%;
+}
+.hlight-products:hover {
+  border: 1px solid rgb(106, 117, 214);
+}
+
+
+:root {
+  --background-color: rgba(193, 193, 9, 0.408);
+  --border-radius: 8px;
+  --border: 2px solid rgba(0, 0, 0, 0.164);
+  --card-gap: 10px;
+  --bg: #ffffff;
+  --fg: #101114;
+  --card-bg: white;
+}
+
+.card {
+  background: var(--card-bg);
+  color: var(--fg);
+  transition: background 3s ease, color 0.3s ease;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not(:has(.theme-switch-input:checked)) {
+    --bg: black;
+    --fg: rgb(40, 104, 0);
+    --card-bg: rgb(24, 23, 27);
+    .btn-toggle{
+      color: white; 
+      transition: 3s ease-in-out, color 0.3s ease;
+    }
+  }
+}
+
+.theme-switch-input {
+  display: none;
+}
+
+.theme-switch-input:checked  .container {
+  --bg: black;
+  --fg: white;
+  --card-bg: rgb(35, 33, 41);
+}
+body {
+  background: var(--bg);
+  color: var(--fg);
+  transition:
+    background 2s ease,
+    color 0.3s ease;
+}
+.btn-toggle {
+  background-color: var(--background-color);
+  padding: 5px 10px;
+  border-radius: var(--border-radius);
+  border: var(--border);
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-weight: bold;
+  color: rgb(63, 60, 60);
+  display: inline-block;
+}
+
+.deal-tag{
+  position: absolute;
+  right: 20px;
+  z-index: 1;
+}
+
+/* .products:hover{
+  border: #0d6efd 2px solid;
+  border-top-left-radius: 2%;
+  border-top-right-radius: 2%;
+  border-bottom-left-radius: 2%;
+  border-bottom-right-radius: 2%;
+  
+} */
+
+/* .hero-card-img {
+  background-image: url("https://bootstrapmade.com/content/demo/SmartStore/assets/img/product/product-showcase-6.webp");
+  background-size: cover; 
+  background-position: top; 
+  background-repeat: no-repeat; 
+  width: 100%;
+  height: 60vh; 
+} */
+
+/* .first-cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
